@@ -1,8 +1,10 @@
-﻿namespace WorkerServiceMediatr.Service.Contracts
+﻿using System.Threading.Tasks;
+
+namespace WorkerServiceMediatr.Service.Contracts
 {
     public interface INotificationService
     {
-        void Notify(string notifyText);
+        Task Notify(string notifyText);
     }
     
 }

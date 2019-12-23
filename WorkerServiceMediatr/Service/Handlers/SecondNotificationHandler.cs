@@ -12,7 +12,6 @@ namespace WorkerServiceMediatr.Service.Handlers
     {
         private readonly ILogger<SecondNotificationHandler> _logger;
        
-
         public SecondNotificationHandler(ILogger<SecondNotificationHandler> logger)
         {
             _logger = logger;

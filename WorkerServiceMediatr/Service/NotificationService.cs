@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using System.Threading.Tasks;
 using WorkerServiceMediatr.Model;
 using WorkerServiceMediatr.Service.Contracts;
 
@@ -13,9 +14,9 @@ namespace WorkerServiceMediatr.Service
             _mediator = mediator;
         }
 
-        public void Notify(string notifyText)
+        public async Task Notify(string notifyText)
         {
-            _mediator.Publish(new NotificationMessage { NotifyText = notifyText });
+            await _mediator.Publish(new NotificationMessage { NotifyText = notifyText });
         }
     }
 }

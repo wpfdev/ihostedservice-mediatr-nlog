@@ -26,8 +26,8 @@ namespace WorkerServiceMediatr
             {
                 while (!stoppingToken.IsCancellationRequested)
                 {
-                    notificationService.Notify("This is a test notification for all handlers");
-                    await Task.Delay(3000, stoppingToken);
+                    await notificationService.Notify("This is a test notification for all handlers");
+                    await Task.Delay(TimeSpan.FromSeconds(3), stoppingToken);
                 }
             }
             catch (Exception ex)
